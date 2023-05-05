@@ -1,21 +1,22 @@
 import random
-
+#Creamos yna lista
 lista = []
 suma = 0
 resta = 0
 tam = int(random.randint(10, 20))
 
 print(tam)
-
+#Creamos un ciclo for para poder encontrar el numero mayor y el menor
 for i in range(tam):
     num = int(random.randrange(100))
     lista.append(num)
+ #Hacemos la suma   
     suma += num
 
     if i == 0:
         mayor = num
         menor = num
-    else:
+    else:       
         if num > mayor:
             mayor = num
         if num < menor:
