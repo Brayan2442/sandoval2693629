@@ -24,20 +24,7 @@ for i in range(tam):
 # Calcular la media
 media = suma / tam
 
-# Calcular la moda
-frecuencias = {}
-for i in lista:
-    if i in frecuencias:
-        frecuencias[i] += 1
-    else:
-        frecuencias[i] = 1
 
-moda = None
-max_frecuencia = 0
-for num, frecuencia in frecuencias.items():
-    if frecuencia > max_frecuencia:
-        moda = num
-        max_frecuencia = frecuencia
 
 print(lista)
 print("La suma de los elementos de la lista es:", suma)
