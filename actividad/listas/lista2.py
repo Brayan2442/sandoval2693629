@@ -32,5 +32,5 @@ print("El porcentaje de la suma de los elementos de la lista es:", (suma / 1000)
 print("El número mayor es:", mayor)
 print("El número menor es:", menor)
 print("La media de la lista es:", media)
-print("La moda de la lista es:", moda)
+
 
