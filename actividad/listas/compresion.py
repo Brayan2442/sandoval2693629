@@ -1,5 +1,6 @@
 import random
 rep=0
+pos=[]
 #Creamos lista con numeros aleatorios forma compresion 
 lista =[int( random.randint(0,9)) for i in range(random.randrange(15,20))]
 print(lista)
@@ -13,5 +14,6 @@ else:
 
 for i in range (len(lista)):
          
-    x= lista[i]
-print(lista.index(x))
+    if num == lista[i]:
+        pos.append(i)
+print("El numero esta en la posicion",pos)
