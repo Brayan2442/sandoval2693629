@@ -1,5 +1,6 @@
 # Inicializar el resultado con 1
 resultado = 1
+x=0
 n=0
 # Calcular la operación x^n s
 if n > 0:
