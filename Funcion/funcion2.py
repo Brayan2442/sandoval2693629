@@ -1,5 +1,10 @@
-#Ejemplo sobre funciones
-def introduction(fn='Jose', ln='perez'):
-    print("Hola, mi nombre es", first_name(), last_name)
+import random
+lista = []
+tam = int(random.randint( 15, 125))
 
-introduction('Ana')
+for i in range(tam):
+    num = int(random.randrange(100))
+    lista.append(num)
+print("numeros",(lista))
+
+

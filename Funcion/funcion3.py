@@ -5,6 +5,11 @@ def llenarLista(tam,rango):
     lista=[random.randrange(rango) for i in range(tam)]    
     return lista
 
+def llenarLista(tam,rango):
+    #Creamos una lista con numeros aleatorios
+    lista2=[random.randrange(rango) for i in range(tam)]    
+    return lista2
+
 def sumaLista(lista):
     #creamos una variable suma
     sum=0
@@ -64,23 +69,6 @@ def decendente(lista):
     return lista
 
 
-def moda(lista):
-    frecuencias = {}
-    max_frecuencia = 0
-    moda = None
-    for elemento in lista:
-        if elemento not in frecuencias:
-            frecuencias[elemento] = 1
-        else:
-            frecuencias[elemento] += 1
-        if frecuencias[elemento] > max_frecuencia:
-            moda = elemento
-            max_frecuencia = frecuencias[elemento]
-    return moda
-
-
-
-
 
 def mediana(lista):
     n = len(lista)
@@ -96,11 +84,19 @@ def mediana(lista):
 
 
 
+
+
+
+
+
+
+
+
+
 print("la suma de la lista es",sumaLista(l1))
 print("El promedio de la lista es",round(promedioLista(l1),2))
 print("El numero mayor es",mayornum(l1))
 print("El numero menor es",menornum(l1))
-print("El numero ascendente es",ascendenteLista(l1))
-print("El numero decendente es",decendente(l1))
-print("La moda de la lista es",moda(l1))
+print("La forma ascendente de la lista es",ascendenteLista(l1))
+print("La forma decendente de la lista es",decendente(l1))
 print("La mediana de la lista es",mediana(l1))
