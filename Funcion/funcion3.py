@@ -24,17 +24,26 @@ print(l1)
 
 
 
-def mayorLista(lista):
-    
-    mayor=max(lista)
+def mayorlis(lista):
+    for i in range(len(lista)-1):
+        for j in range(i+1, len(l1)):
+            if lista[i]>lista[j]:
+                lista[i],lista[j]=lista[j],lista[i]
+            return lista
+
+def mayornum(lista):
+    mayor=lista[0]
+    for num in lista:
+        if num>mayor:
+            mayor=num
     return mayor
 
-
-def menorLista(lista):
-    
-    menor=min(lista)
+def menornum(lista):
+    menor=lista[0]
+    for num in lista:
+        if num<menor:
+            menor=num
     return menor
-
 
 def ascendenteLista(lista):
    
@@ -56,16 +65,42 @@ def decendente(lista):
 
 
 def moda(lista):
-    for i in range(len(lista)):
-        
+    frecuencias = {}
+    max_frecuencia = 0
+    moda = None
+    for elemento in lista:
+        if elemento not in frecuencias:
+            frecuencias[elemento] = 1
+        else:
+            frecuencias[elemento] += 1
+        if frecuencias[elemento] > max_frecuencia:
+            moda = elemento
+            max_frecuencia = frecuencias[elemento]
+    return moda
 
 
 
 
 
-print(sumaLista(l1))
-print(round(promedioLista(l1),2))
-print(mayorLista(l1))
-print(menorLista(l1))
-print(ascendenteLista(l1))
-print(decendente(l1))
+def mediana(lista):
+    n = len(lista)
+    lista_ordenada = ascendenteLista(lista)
+
+    if n % 2 == 0:
+        mediana = (lista_ordenada[n // 2 - 1] + lista_ordenada[n // 2]) / 2
+    else:
+        mediana = lista_ordenada[n // 2]
+
+    return mediana
+
+
+
+
+print("la suma de la lista es",sumaLista(l1))
+print("El promedio de la lista es",round(promedioLista(l1),2))
+print("El numero mayor es",mayornum(l1))
+print("El numero menor es",menornum(l1))
+print("El numero ascendente es",ascendenteLista(l1))
+print("El numero decendente es",decendente(l1))
+print("La moda de la lista es",moda(l1))
+print("La mediana de la lista es",mediana(l1))
