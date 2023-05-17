@@ -89,11 +89,15 @@ def promedioLista(lista):
     promedio = sum(lista) / len(lista)
     return promedio
 
+
 promedio_l1 = promedioLista(l1)
 promedio_l2 = promedioLista(l2)
 
 print("El promedio de la primera lista es:", promedio_l1)
 print("El promedio de la segunda lista es:", promedio_l2)
+
+def listaunida(lista1,lista2):
+    lista1.e
     
 lista2 = [(suma_l1+suma_l2)/len()]
 print(lista2)
