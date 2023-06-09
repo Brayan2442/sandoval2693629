@@ -1,13 +1,20 @@
 
+from typing import *
 from usuario import*
-persona1 = persona (" juan ", 22324, " Cundinamarca ")
+from cuenta import*
+from libro import*
+persona1 = usuario (" juan ", 22324, " Cundinamarca ")
 print(persona1.saludo())
 
+def __init__(self,nombre,id):
+    self.nombre = nombre
+    self.id = id
+    
+    # creamos un metodo que p
 
 estudiante1 = estudiante( ' Oscar ', 24245 , ' ADSO ')
 print(estudiante1.saludo1())
 
 
-print('el total de todo lo que debe es:',totalmulta)
-print('el total de lo que debe con la revaja por devolver libros es:',total)
-
+mi_libro = libros ("El Gran Gatsby", "F. Scott Fitzgerald", 1925, 12345)
+mi_libro.infor_libro()
